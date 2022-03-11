@@ -1,0 +1,23 @@
+.bacon-button {
+    border: none;
+    border-radius: var(--radius5);
+    padding: var(--space10) var(--space15);
+    background-color: var(--green);
+    color: var(--white);
+    transition: .3s;
+}
+
+.bacon-button:hover {
+    background-color: var(--black);
+    cursor: pointer;
+}
+
+.bacon-section {
+    margin-top: var(--space10);
+}
+
+.bacon-image {
+    border-radius: var(--radius5);
+    border: 1px solid var(--black);
+    margin-bottom: var(--space5);
+}

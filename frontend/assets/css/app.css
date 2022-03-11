@@ -1,16 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('./constants.css');
+@import url('./bacon.css');
 
 html, body {
-  background-color: #F7F8FA;
-  font-family: 'Poppins', sans-serif;
+  background-color: var(--white);
+  font-family: 'Roboto', sans-serif;
   height: 100vh;
-  color: #46444c;
+  color: var(--black);
   position: relative;
 }
 
 body:before {
   content: '';
-  background: #5A45FF;
+  background: var(--green);
   top: 0;
   left: 0;
   right: 0;
@@ -24,15 +26,14 @@ body:before {
 }
 
 a {
-  color: #5A45FF;
+  color: var(--green);
   text-decoration: none;
 }
 
 main {
   max-width: 620px;
   margin: auto;
-  height: 100vh;
-  padding: 0 30px;
+  padding: 10px 30px;
   align-items: center;
   display: flex;
   justify-content: center;

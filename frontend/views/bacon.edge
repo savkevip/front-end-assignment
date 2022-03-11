@@ -5,4 +5,24 @@
   @!component('snowdog/bacon', {
     img: '/images/bacon.jpg'
   })
+  <script>
+    (function () {
+        const insertElementAfter = (newNode, existingNode) => {
+            existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
+        };
+
+        const elementButton = document.getElementsByTagName("button")[0];
+        const elementImageSection = document.getElementsByTagName("section")[1];
+        const elementImage = document.getElementsByTagName("img")[0];
+
+        elementButton.setAttribute('class', 'bacon-button');
+        elementImageSection.setAttribute('class', 'bacon-section');
+        elementImage.setAttribute('class', 'bacon-image');
+
+        elementButton.addEventListener('click', () => {
+            const cloned = elementImage.cloneNode(true);
+            insertElementAfter(cloned,  elementImageSection.lastElementChild);
+        });
+    })()
+  </script>
 @end

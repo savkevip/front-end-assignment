@@ -44,7 +44,7 @@ Route.get('/checkout', async ({ view }) => {
     },
   }
 
-  return view.render('index', state)
+  return view.render('checkout', state)
 })
 
 Route.post('/order', async ({ request, response }) => {
