@@ -11,7 +11,10 @@
                 required
             @endif
             @if($props.pattern) 
-                required={$props.pattern}
+                required="{{$props.pattern}}"
+            @endif
+            @if($props.maxlength) 
+                maxlength="{{$props.maxlength}}"
             @endif
         />
         @if($props.icon)

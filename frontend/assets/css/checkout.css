@@ -7,6 +7,10 @@
     margin-right: var(--space15);
 }
 
+.checkout-container-button-wrapper {
+    padding-left: var(--space15);
+}
+
 /* order summary component - start */
 .checkout-summary-container {
     background-color: var(--white);

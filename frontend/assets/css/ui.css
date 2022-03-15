@@ -3,11 +3,15 @@
     width: 15px;
     height: 15px;
 }
+.payment-card-icon {
+    width: 25px;
+    height: 25px;
+}
 /* icon ui component - end */
   
 /* button ui component - start */
 .button {
-    width: 355px;
+    width: 340px;
     height: 60px;
     color: var(--white);
     background-color: var(--green2);
@@ -76,7 +80,10 @@
 .input-icon {
     position: absolute;
     right: 10px;
-    top: 22px;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 /* input and select ui component - end */

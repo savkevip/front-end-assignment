@@ -4,7 +4,38 @@
         title: "Payment details",
         icon: "lock"
     })    
-   <form action="">
-
-   </form>
+   <form class="checkout-form-content" action="">
+    <div class="form-filed-space">
+        @!component('components/ui/input', {
+            name: "creditCardNumber",
+            label: "Credit Card Number",
+            placeholder: "0000-0000-0000-0000",
+            type: "number",
+            icon: "visa",
+            required: true,
+            pattern: "^[0-9]{16}$"
+        })
+    </div>
+    <div class="form-filed-space form-filed-wrapper">
+        @!component('components/ui/input', {
+            name: "securityCode",
+            label: "Security code",
+            placeholder: "***",
+            type: "password",
+            icon: "question-mark",
+            small: true,
+            required: true,
+            pattern: "^[0-9]{3}$",
+            maxlength: "3"
+        })
+        @!component('components/ui/input', {
+            name: "lastName",
+            label: "Expiration date",
+            placeholder: "MM/YY",
+            small: true,
+            required: true,
+            pattern: "^[0-9]{2}\/[0-9]{2}$"
+        }) 
+    </div>
+</form>
 </div>

@@ -6,11 +6,14 @@
     <div class="checkout-container-box">
       @!component('components/personal-info-form')
       @!component('components/payment-details-form')
-      @!component('components/ui/button', {
-        label: "Complete purchase",
-        icon: "cart",
-        onClick: `console.log("test")`
-      })
+      <div class="checkout-container-button-wrapper">
+        @!component('components/ui/button', {
+          label: "Complete purchase",
+          icon: "cart",
+          onClick: `console.log("test")`,
+          type: "submit"
+        })
+      </div>
     </div>
     <div class="checkout-container-box">
       @!component('components/order-summary', {
