@@ -9,6 +9,9 @@
 
 .checkout-container-button-wrapper {
     padding-left: var(--space15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* order summary component - start */
@@ -19,6 +22,7 @@
     box-shadow: var(--box-shadow);
     width: 250px;
     box-sizing: border-box;
+    margin-top: calc(var(--space15) * 2.3); 
 }
 
 .checkout-summary-content {

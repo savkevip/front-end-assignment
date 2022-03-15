@@ -2,22 +2,20 @@
     @!component('components/form-title', {
         formNumber: 1,
         title: "Personal information"
-    }) 
-   <form class="checkout-form-content" action="">
+    })
+   <div class="checkout-form-content">
         <div class="form-filed-space form-filed-wrapper">
             @!component('components/ui/input', {
                 name: "firstName",
                 label: "First name",
                 placeholder: "Elon",
-                small: true,
-                required: true
+                small: true
             })
             @!component('components/ui/input', {
                 name: "lastName",
                 label: "Last name",
                 placeholder: "Mask",
-                small: true,
-                required: true
+                small: true
             }) 
         </div>
         <div class="form-filed-space">
@@ -25,8 +23,7 @@
                 name: "email",
                 label: "Email",
                 placeholder: "elon@spacex.com",
-                type: "email",
-                required: true
+                type: "email"
             })
         </div>
         <div class="form-filed-space form-filed-wrapper">
@@ -34,17 +31,14 @@
                 name: "country",
                 label: "Country",
                 options: ["United States", "Serbia", "Norway", "Poland"],
-                small: true,
-                required: true
+                small: true
             })
             @!component('components/ui/input', {
                 name: "postalCode",
                 label: "Postal Code",
                 placeholder: "10001",
                 small: true,
-                type: "number",
-                required: true,
-                pattern: "^[0-9]{5}$"
+                type: "number"
             }) 
         </div>
         <div class="form-filed-space">
@@ -52,10 +46,8 @@
                 name: "phone",
                 label: "Phone Number",
                 placeholder: "(212) 692-93-92",
-                type: "tel",
-                required: true,
-                pattern: "([0-9]{3}) [0-9]{3}-[0-9]{2}-[0-9]{2}"
+                type: "tel"
             })
         </div>
-   </form>
+   </div>
 </div>

@@ -3,9 +3,48 @@
     width: 15px;
     height: 15px;
 }
+
 .payment-card-icon {
     width: 25px;
     height: 25px;
+}
+
+.loader-icon {
+    width: 35px;
+    height: 35px;
+}
+
+.icon-tooltip .icon-tooltip-text {
+    visibility: hidden;
+    min-width: 120px;
+    background-color: var(--gray3);
+    color: var(--white);
+    text-align: center;
+    border-radius: var(--radius5);
+    padding: var(--space5) 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 80%;
+    left: 50%;
+    margin-left: calc(var(--space20) * -3);
+    opacity: 0;
+    transition: .3s;
+}
+
+.icon-tooltip .icon-tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: calc(var(--space5) * -1);
+    border-width: var(--space5);
+    border-style: solid;
+    border-color: var(--gray3) transparent transparent transparent;
+}
+
+.icon-tooltip:hover .icon-tooltip-text {
+    visibility: visible;
+    opacity: 1;
 }
 /* icon ui component - end */
   
@@ -85,5 +124,4 @@
     display: flex;
     align-items: center;
 }
-
 /* input and select ui component - end */

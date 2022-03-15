@@ -1,10 +1,9 @@
 <div class="{{$props.small ? `input-container input-container_column` : `input-container`}}">
-    <label class="{{$props.error ? `input-label input-label-error bold` : `input-label bold`}}" for="{{$props.name}}">{{$props.label}}</label>
+    <label class="input-label bold" for="{{$props.name}}">{{$props.label}}</label>
         <select
             class="{{$props.icon ? 'input-field input-field-icon input-hide-arrow' : 'input-field input-hide-arrow'}}"
             id="{{$props.name}}"
             name="{{$props.name}}"
-            required
         >   
             @each(option in $props.options)
                 <option value="{{option}}">{{option}}</option>

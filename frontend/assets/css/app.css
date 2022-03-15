@@ -111,3 +111,18 @@ main code {
 .form-filed-space {
   margin-bottom: var(--space15);
 }
+
+.form-message {
+  margin-top: var(--space20);
+  font-size: var(--font-large);
+  color: var(--black);
+  text-align: center;
+}
+
+.form-message-error {
+  color: var(--red);
+}
+
+.form-message-success {
+  color: var(--green1);
+}

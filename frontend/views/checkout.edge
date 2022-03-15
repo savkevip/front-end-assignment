@@ -3,18 +3,18 @@
 
 @section('body')
   <div class="checkout-container">
-    <div class="checkout-container-box">
+    <form id="order"class="checkout-container-box">
       @!component('components/personal-info-form')
       @!component('components/payment-details-form')
       <div class="checkout-container-button-wrapper">
         @!component('components/ui/button', {
           label: "Complete purchase",
           icon: "cart",
-          onClick: `console.log("test")`,
           type: "submit"
         })
       </div>
-    </div>
+      <div id="form-message" class="form-message"></div>
+    </form>
     <div class="checkout-container-box">
       @!component('components/order-summary', {
         cart: state.cart || { items: [], totals: {} }
