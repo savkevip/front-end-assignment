@@ -10,7 +10,8 @@
         @!component('components/ui/button', {
           label: "Complete purchase",
           icon: "cart",
-          type: "submit"
+          type: "submit",
+          disabled: !state.cart.items.length
         })
       </div>
       <div id="form-message" class="form-message"></div>
@@ -108,7 +109,7 @@
           const parsedMessage = JSON.parse(message);
           messageElement.setAttribute("class", "form-message form-message-success");
           messageElement.innerHTML = parsedMessage.message;
-          resetOnDefaultCardIcon();
+          resetOnDefaultCardIcon()
           form.reset();
         }
 

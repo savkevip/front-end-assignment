@@ -12,17 +12,17 @@
       <div class="checkout-summary-box">
         <div class="checkout-summary-box-item">
           <span class="checkout-summary-box-item__text">Total purchases</span>
-          <span class="checkout-summary-box-item__text">$ {{$props.cart.totals.subTotal}}</span>  
+          <span class="checkout-summary-box-item__text">$ {{$props.cart.totals.subTotal || 0}}</span>  
         </div>
         <div class="checkout-summary-box-item">
           <span class="checkout-summary-box-item__text">Estimated tax</span>
-          <span class="checkout-summary-box-item__text">$ {{$props.cart.totals.tax}}</span>
+          <span class="checkout-summary-box-item__text">$ {{$props.cart.totals.tax || 0}}</span>
         </div>
       </div>
       <div class="checkout-summary-box">
         <div class="checkout-summary-box-item">
           <span class="checkout-summary-box-item__text bold">Total</span>
-          <span class="checkout-summary-box-item__grand_total_text bold">$ {{$props.cart.totals.grandTotal}}</span>
+          <span class="checkout-summary-box-item__grand_total_text ">$ {{$props.cart.totals.grandTotal || 0}}</span>
         </div>
       </div>
     </div>

@@ -71,6 +71,15 @@
     cursor: pointer;
     box-shadow: var(--box-shadow);
 }
+
+.button-disabled {
+    background-color: var(--gray3);
+}
+
+.button-disabled:hover {
+    box-shadow: none;
+    cursor: not-allowed;
+}
 /* button ui component - end */
 
 /* input and select ui component - start */

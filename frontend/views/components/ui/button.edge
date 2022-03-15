@@ -1,6 +1,9 @@
 <button
-    class="button" 
+    class="{{$props.disabled ? `button button-disabled` : `button`}}" 
     type={{$props.type ? $props.type : "button"}}
+    @if($props.disabled) 
+        disabled
+    @endif    
 >
     @if($props.icon)
         @!component('components/ui/icon', {
