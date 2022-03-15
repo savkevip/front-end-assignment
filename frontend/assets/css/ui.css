@@ -44,9 +44,17 @@
     box-shadow: var(--box-shadow);
 }
 
+.input-container_column {
+    width: 170px;
+}
+
 .input-label {
     color: var(--black);
     font-size: var(--font-normal);
+}
+
+.input-label-error {
+    color: var(--red);
 }
 
 .input-field {
@@ -63,10 +71,6 @@
 
 .input-field::placeholder {
     color: var(--gray3);
-}
-
-.input-error {
-    border: 1px solid var(--red);
 }
 
 .input-icon {

@@ -85,3 +85,13 @@ main code {
 .bold {
   font-weight: bold;
 }
+
+.form-filed-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-filed-space {
+  margin-bottom: var(--space15);
+}

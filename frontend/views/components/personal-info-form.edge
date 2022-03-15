@@ -5,23 +5,27 @@
         icon: "lock"
     })    
    <form action="">
-        <div>
+        <div class="form-filed-space form-filed-wrapper">
             @!component('components/ui/input', {
                 name: "firstName",
                 label: "First name",
                 placeholder: "Elon",
-                icon: "lock"
+                icon: "lock",
+                small: true
             })
             @!component('components/ui/input', {
                 name: "lastName",
                 label: "Last name",
-                placeholder: "Mask"
+                placeholder: "Mask",
+                small: true
             }) 
         </div>
-        @!component('components/ui/input', {
-            name: "email",
-            label: "Email",
-            placeholder: "elon@spacex.com"
-        }) 
+        <div class="form-filed-space">
+            @!component('components/ui/input', {
+                name: "email",
+                label: "Email",
+                placeholder: "elon@spacex.com"
+            })
+        </div>
    </form>
 </div>

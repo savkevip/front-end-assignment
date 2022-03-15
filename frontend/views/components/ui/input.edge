@@ -1,5 +1,5 @@
-<div class="{{$props.error ? `input-container input-error` : `input-container` }}"">
-    <label class="input-label bold" for="{{$props.name}}">{{$props.label}}</label>
+<div class="{{$props.small ? `input-container input-container_column` : `input-container`}}">
+    <label class="{{$props.errpr ? `input-label input-label-error bold` : `input-label bold`}}" for="{{$props.name}}">{{$props.label}}</label>
         <input
             class="{{$props.icon ? 'input-field input-field-icon' : 'input-field'}}"
             id="{{$props.name}}"
