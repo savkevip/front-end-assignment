@@ -64,13 +64,17 @@
 .checkout-form-container {
     width: 355px;
 }
+
+.checkout-form-content {
+    padding-left: var(--space15);
+}
 /* personal info form component - end */
 
 /* form title component - start  */
 .checkout-form-title-container {
     display: flex;
     align-items: center;
-    margin-bottom: var(--space10);
+    margin-bottom: var(--space15);
 }
 
 .checkout-form-title-number {
@@ -92,5 +96,5 @@
 }
 /* form title component - end  */
 
-/* personal info form title component - start  */
+/* personal info form title component - start */
 /* personal info form title component - end  */

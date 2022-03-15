@@ -1,16 +1,14 @@
 <div class="checkout-form-container">
     @!component('components/form-title', {
         formNumber: 1,
-        title: "Personal information",
-        icon: "lock"
+        title: "Personal information"
     })    
-   <form action="">
+   <form class="checkout-form-content" action="">
         <div class="form-filed-space form-filed-wrapper">
             @!component('components/ui/input', {
                 name: "firstName",
                 label: "First name",
                 placeholder: "Elon",
-                icon: "lock",
                 small: true
             })
             @!component('components/ui/input', {
