@@ -21,8 +21,9 @@
     border-radius: var(--radius5);
     box-shadow: var(--box-shadow);
     width: 250px;
+    height: 285px;
     box-sizing: border-box;
-    margin-top: calc(var(--space15) * 2.3); 
+    margin-top: calc(var(--space15) * 2.3);
 }
 
 .checkout-summary-content {
@@ -103,6 +104,3 @@
     text-transform: uppercase;
 }
 /* form title component - end  */
-
-/* personal info form title component - start */
-/* personal info form title component - end  */
