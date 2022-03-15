@@ -1,7 +1,6 @@
 <button class="button" onclick="{{$props.onClick}}">
     @if($props.icon)
         @!component('components/ui/icon', {
-            source: 'resources/views/checkout.edge',
             icon: $props.icon
         })
     @end

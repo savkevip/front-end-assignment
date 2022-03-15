@@ -1,11 +1,14 @@
+/* icon ui component - start */
 .icon {
     width: 15px;
     height: 15px;
-  }
+}
+/* icon ui component - end */
   
+/* button ui component - start */
 .button {
     width: 355px;
-    height: 50px;
+    height: 60px;
     color: var(--white);
     background-color: var(--green2);
     text-transform: uppercase;
@@ -25,3 +28,50 @@
     cursor: pointer;
     box-shadow: var(--box-shadow);
 }
+/* button ui component - end */
+
+/* input ui component - start */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    background-color: var(--white);
+    height: 60px;
+    border-radius: var(--radius5);
+    box-sizing: border-box;
+    padding: var(--space10);
+    box-shadow: var(--box-shadow);
+}
+
+.input-label {
+    color: var(--black);
+    font-size: var(--font-normal);
+}
+
+.input-field {
+    color: var(--black);
+    font-size: var(--font-normal);
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.input-field-icon {
+    padding-right: var(--space20);
+}
+
+.input-field::placeholder {
+    color: var(--gray3);
+}
+
+.input-error {
+    border: 1px solid var(--red);
+}
+
+.input-icon {
+    position: absolute;
+    right: 10px;
+    top: 22px;
+}
+/* input ui component - end */

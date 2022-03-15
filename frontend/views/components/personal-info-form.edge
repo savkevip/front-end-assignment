@@ -1,11 +1,27 @@
 <div class="checkout-form-container">
     @!component('components/form-title', {
-        source: 'resources/views/checkout.edge',
         formNumber: 1,
         title: "Personal information",
         icon: "lock"
     })    
    <form action="">
-
+        <div>
+            @!component('components/ui/input', {
+                name: "firstName",
+                label: "First name",
+                placeholder: "Elon",
+                icon: "lock"
+            })
+            @!component('components/ui/input', {
+                name: "lastName",
+                label: "Last name",
+                placeholder: "Mask"
+            }) 
+        </div>
+        @!component('components/ui/input', {
+            name: "email",
+            label: "Email",
+            placeholder: "elon@spacex.com"
+        }) 
    </form>
 </div>

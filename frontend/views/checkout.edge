@@ -4,14 +4,9 @@
 @section('body')
   <div class="checkout-container">
     <div class="checkout-container-box">
-      @!component('components/personal-info-form', {
-        source: 'resources/views/checkout.edge',
-      })
-      @!component('components/payment-details-form', {
-        source: 'resources/views/checkout.edge',
-      })
+      @!component('components/personal-info-form')
+      @!component('components/payment-details-form')
       @!component('components/ui/button', {
-        source: 'resources/views/checkout.edge',
         label: "Complete purchase",
         icon: "cart",
         onClick: `console.log("test")`
@@ -19,7 +14,6 @@
     </div>
     <div class="checkout-container-box">
       @!component('components/order-summary', {
-        source: 'resources/views/checkout.edge',
         cart: state.cart || { items: [], totals: {} }
       })
     </div>

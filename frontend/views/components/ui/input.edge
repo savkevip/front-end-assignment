@@ -1,0 +1,19 @@
+<div class="{{$props.error ? `input-container input-error` : `input-container` }}"">
+    <label class="input-label bold" for="{{$props.name}}">{{$props.label}}</label>
+        <input
+            class="{{$props.icon ? 'input-field input-field-icon' : 'input-field'}}"
+            id="{{$props.name}}"
+            name="{{$props.name}}"
+            type="{{$props.type ? $props.type : 'text'}}"
+            placeholder="{{$props.placeholder}}"
+            value="{{$props.value || ''}}"
+            required
+        />
+        @if($props.icon)
+            <div class="input-icon">
+                @!component('components/ui/icon', {
+                    icon: $props.icon
+                })
+            </div>
+        @end
+</div>

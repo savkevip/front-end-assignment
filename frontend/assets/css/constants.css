@@ -3,6 +3,7 @@
     --space5: 5px;
     --space10: 10px;
     --space15: 15px;
+    --space20: 20px;
     --radius5: 5px;
     --radius50: 50px;
     --grey1: #f2f2f2;
@@ -12,6 +13,7 @@
     --black: #000000;
     --green1: #578b7b;
     --green2: #6bd400;
+    --red: #cc0a00;
     --dashed-border: 1px dashed var(--grey2);
     --box-shadow: 0 3px 5px 1px var(--gray3);
     --font-small: 12px;
