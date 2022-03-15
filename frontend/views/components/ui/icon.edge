@@ -1,4 +1,7 @@
-<div 
+<div
+    @if($props.id)
+        id="{{$props.id}}"
+    @endif
     @if($props.tooltipText)
         class="icon-tooltip"
     @endif

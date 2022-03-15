@@ -6,7 +6,6 @@
             name="{{$props.name}}"
             type="{{$props.type ? $props.type : 'text'}}"
             placeholder="{{$props.placeholder}}"
-            value="{{$props.value || ''}}"
             @if($props.maxlength) 
                 maxlength="{{$props.maxlength}}"
             @endif
@@ -15,7 +14,8 @@
             <div class="input-icon">
                 @!component('components/ui/icon', {
                     icon: $props.icon,
-                    tooltipText: $props.tooltipIconText
+                    tooltipText: $props.tooltipIconText,
+                    id: `${$props.name}Icon`
                 })
             </div>
         @end

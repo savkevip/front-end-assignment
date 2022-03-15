@@ -2,32 +2,46 @@
     @!component('components/ui/input', {
         name: "creditCard",
         label: "Credit Card Number",
-        placeholder: "0000-0000-0000-0000",
-        icon: "visa",
-        maxlength: "19"
+        placeholder: "3333222244445555",
+        icon: "question-mark",
+        tooltipIconText: "Card type",
+        maxlength: "16"
     })
     <script>
         (function() {
-            const CARD_DASH_SPOT_FIRST = 4;
-            const CARD_DASH_SPOT_MIDDLE = 9;
-            const CARD_DASH_SPOT_LAST = 14;
+            const VISA_STARTS = 4;
+            const MASTERCARD_STARTS = 6;
+            const AMERICAN_EXPRESS_STARTS = 9;
 
-            const creditCardElement = document.getElementById("creditCard");
+            const inputElement = document.getElementById("creditCard");
+            const iconElement = document.getElementById("creditCardIcon").firstElementChild;
 
-            creditCardElement.addEventListener('input', function(event) {
+            inputElement.addEventListener("input", function(event) {
                 const value = event.target.value;
-                const isDeleting = !event.data;
+                const firstNumber = parseInt(value[0]);
 
-                if (
-                    value.length === CARD_DASH_SPOT_FIRST ||
-                    value.length === CARD_DASH_SPOT_MIDDLE ||
-                    value.length === CARD_DASH_SPOT_LAST
-                ) {
-                    if (isDeleting) {
-                        creditCardElement.value = value;    
-                    } else {
-                        creditCardElement.value = `${value}-`;
+                if (value) {
+                    if (firstNumber <= VISA_STARTS) {
+                        iconElement.setAttribute("src", "/icons/visa.svg");
+                        iconElement.setAttribute("class", "payment-card-icon");
+                        return;
                     }
+
+                    if (firstNumber <= MASTERCARD_STARTS) {
+                        iconElement.setAttribute("src", "/icons/mastercard.svg");
+                        iconElement.setAttribute("class", "payment-card-icon");
+                        return;
+                    }
+
+                    if (firstNumber <= AMERICAN_EXPRESS_STARTS) {
+                        iconElement.setAttribute("src", "/icons/american-express.svg");
+                        iconElement.setAttribute("class", "payment-card-icon");
+                        return;
+                    }
+                } else {
+                    iconElement.setAttribute("class", "icon");
+                    iconElement.setAttribute("src", "/icons/question-mark.svg");
+                    return;
                 }
             })
         })()
