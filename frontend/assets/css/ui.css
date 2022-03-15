@@ -30,7 +30,7 @@
 }
 /* button ui component - end */
 
-/* input ui component - start */
+/* input and select ui component - start */
 .input-container {
     display: flex;
     flex-direction: column;
@@ -78,4 +78,5 @@
     right: 10px;
     top: 22px;
 }
-/* input ui component - end */
+
+/* input and select ui component - end */

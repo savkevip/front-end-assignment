@@ -7,7 +7,12 @@
             type="{{$props.type ? $props.type : 'text'}}"
             placeholder="{{$props.placeholder}}"
             value="{{$props.value || ''}}"
-            required
+            @if($props.required) 
+                required
+            @endif
+            @if($props.pattern) 
+                required={$props.pattern}
+            @endif
         />
         @if($props.icon)
             <div class="input-icon">
