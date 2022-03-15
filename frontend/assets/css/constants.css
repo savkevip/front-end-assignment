@@ -5,7 +5,15 @@
     --space15: 15px;
     --radius5: 5px;
     --radius10: 10px;
+    --grey1: #f2f2f2;
+    --grey2: #ebebeb;
     --white: #ffffff;
     --black: #000000;
     --green: #578b7b;
+    --dashed-border: 1px dashed var(--grey2);
+    --box-shadow: 0 3px 5px 1px var(--grey2);
+    --font-small: 12px;
+    --font-normal: 14px;
+    --font-big: 18px;
+    --font-large: 22px;
 }

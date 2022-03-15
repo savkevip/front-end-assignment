@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 @import url('./constants.css');
 @import url('./bacon.css');
+@import url('./checkout.css');
 
 html, body {
-  background-color: var(--white);
+  background-color: var(--grey1);
   font-family: 'Roboto', sans-serif;
   height: 100vh;
   color: var(--black);
@@ -33,7 +34,7 @@ a {
 main {
   max-width: 620px;
   margin: auto;
-  padding: 10px 30px;
+  padding: 25px;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -78,4 +79,8 @@ main li:before {
 main code {
   font-size: 16px;
   background: #e6e2ff;
+}
+
+.bold {
+  font-weight: bold;
 }

@@ -1,7 +1,30 @@
-<div class="order-summery-container">
-    <h1 class="title">
-      Hi there govnaru! :D
-    </h1>
-    
+<div class="checkout-summary-container">
+    <div class="checkout-summary-content">
+      <h1 class="checkout-summary-title bold">Your order</h1>
+      <div class="checkout-summary-box">
+        @each(item in $props.cart.items)
+          <div class="checkout-summary-box-item">
+            <span class="checkout-summary-box-item__text">{{item.name}}</span>
+            <span class="checkout-summary-box-item__text">$ {{item.price}}</span>
+          </div>
+        @endeach
+      </div>
+      <div class="checkout-summary-box">
+        <div class="checkout-summary-box-item">
+          <span class="checkout-summary-box-item__text">Total purchases</span>
+          <span class="checkout-summary-box-item__text">$ {{$props.cart.totals.subTotal}}</span>  
+        </div>
+        <div class="checkout-summary-box-item">
+          <span class="checkout-summary-box-item__text">Estimated tax</span>
+          <span class="checkout-summary-box-item__text">$ {{$props.cart.totals.tax}}</span>
+        </div>
+      </div>
+      <div class="checkout-summary-box">
+        <div class="checkout-summary-box-item">
+          <span class="checkout-summary-box-item__text bold">Total</span>
+          <span class="checkout-summary-box-item__grand_total_text bold">$ {{$props.cart.totals.grandTotal}}</span>
+        </div>
+      </div>
+    </div>
 </div>
   

@@ -3,6 +3,7 @@
 
 @section('body')
   @!component('components/order-summary', {
-    source: 'resources/views/checkout.edge'
+    source: 'resources/views/checkout.edge',
+    cart: state.cart
   })
 @end
