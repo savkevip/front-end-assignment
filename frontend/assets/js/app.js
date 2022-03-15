@@ -1,7 +1,14 @@
 import '../css/app.css';
 
 (function() {
+  const SUCCESS_REQUEST = 200;
   const MIN_TEXT_LENGTH = 50;
+  const MAX_CVV_LENGTH = 3;
+  const MAX_CARD_NUMBER_LENGTH = 16;
+  const MAX_EXP_DATE_LENGTH = 5;
+
+  
+
   const isString = function(input) {
     return typeof(input) === "string";
   }
@@ -62,8 +69,6 @@ import '../css/app.css';
       message: "Invalid expiration date"
     }
   };
-  
-  const SUCCESS_REQUEST = 200;
 
   const messageElement = document.getElementById("form-message");
 
@@ -107,7 +112,7 @@ import '../css/app.css';
         const data = Object.fromEntries(FD.entries()); 
         const validationMessages = getValidateMessages(data);
         if (validationMessages) {
-          renderErrorMessage(validationMessages);
+          return renderErrorMessage(validationMessages);
         }
   
         messageElement.innerHTML = "";
@@ -116,9 +121,9 @@ import '../css/app.css';
           const message = event.target.responseText;
           
           if (event.target.status !== SUCCESS_REQUEST) {
-              renderErrorMessage(message);
+            return renderErrorMessage(message);
           } else {
-              renderSuccessMessage(message, form);
+            return renderSuccessMessage(message, form);
           }
         });
   

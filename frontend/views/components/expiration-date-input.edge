@@ -1,0 +1,30 @@
+<div>
+    @!component('components/ui/input', {
+        name: "expDate",
+        label: "Expiration date",
+        placeholder: "MM/YY",
+        small: true,
+        maxlength: "5"
+    }) 
+    <script>
+        (function() {
+            const EXP_SLASH_SPOT_FIRST = 2;
+
+            const expirationDateElement = document.getElementById("expDate");
+
+            expirationDateElement.addEventListener('input', function(event) {
+                const value = event.target.value;
+                console.log(value)
+                const isDeleting = !event.data;
+
+                if (value.length === EXP_SLASH_SPOT_FIRST) {
+                    if (isDeleting) {
+                        expirationDateElement.value = value;
+                    } else {
+                        expirationDateElement.value = `${value}/`;
+                    }
+                }
+            })
+        })()
+    </script>
+</div>

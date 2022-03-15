@@ -6,13 +6,7 @@
     })    
    <div class="checkout-form-content">
     <div class="form-filed-space">
-        @!component('components/ui/input', {
-            name: "creditCard",
-            label: "Credit Card Number",
-            placeholder: "0000-0000-0000-0000",
-            type: "number",
-            icon: "visa"
-        })
+        @!component('components/card-input')
     </div>
     <div class="form-filed-space form-filed-wrapper">
         @!component('components/ui/input', {
@@ -22,14 +16,10 @@
             type: "password",
             icon: "question-mark",
             tooltipIconText: "This is CVV",
-            small: true
+            small: true,
+            maxlength: "3"
         })
-        @!component('components/ui/input', {
-            name: "expDate",
-            label: "Expiration date",
-            placeholder: "MM/YY",
-            small: true
-        }) 
+        @!component('components/expiration-date-input')
     </div>
 </div>
 </div>

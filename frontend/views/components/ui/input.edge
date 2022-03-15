@@ -7,6 +7,9 @@
             type="{{$props.type ? $props.type : 'text'}}"
             placeholder="{{$props.placeholder}}"
             value="{{$props.value || ''}}"
+            @if($props.maxlength) 
+                maxlength="{{$props.maxlength}}"
+            @endif
         />
         @if($props.icon)
             <div class="input-icon">

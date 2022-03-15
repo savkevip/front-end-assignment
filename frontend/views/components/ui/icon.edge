@@ -1,4 +1,8 @@
-<div class="{{$props.tooltipText ? `icon-tooltip` : ``}}">
+<div 
+    @if($props.tooltipText)
+        class="icon-tooltip"
+    @endif
+>
     @if($props.icon === "lock")
         <img class="icon" src="/icons/lock.svg" alt="lock icon" />
     @elseif($props.icon === "cart")
@@ -12,7 +16,7 @@
     @elseif($props.icon === "question-mark")
         <img class="icon" src="/icons/question-mark.svg" alt="question mark icon" />
     @elseif($props.icon === "arrow-down")
-        <img class="icon" src="/icons/arrow-down.svg" alt="arrowdown icon" />
+        <img class="icon" src="/icons/arrow-down.svg" alt="arrow down icon" />
     @elseif($props.icon === "loader")
         <img class="loader-icon" src="/icons/loader.svg" alt="Animated loader icon" />
     @else
@@ -20,5 +24,5 @@
     @endif
     @if($props.tooltipText)
         <span class="icon-tooltip-text">{{$props.tooltipText}}</span>
-    @end    
+    @end
 </div>

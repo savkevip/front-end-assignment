@@ -1,0 +1,35 @@
+<div>
+    @!component('components/ui/input', {
+        name: "creditCard",
+        label: "Credit Card Number",
+        placeholder: "0000-0000-0000-0000",
+        icon: "visa",
+        maxlength: "19"
+    })
+    <script>
+        (function() {
+            const CARD_DASH_SPOT_FIRST = 4;
+            const CARD_DASH_SPOT_MIDDLE = 9;
+            const CARD_DASH_SPOT_LAST = 14;
+
+            const creditCardElement = document.getElementById("creditCard");
+
+            creditCardElement.addEventListener('input', function(event) {
+                const value = event.target.value;
+                const isDeleting = !event.data;
+
+                if (
+                    value.length === CARD_DASH_SPOT_FIRST ||
+                    value.length === CARD_DASH_SPOT_MIDDLE ||
+                    value.length === CARD_DASH_SPOT_LAST
+                ) {
+                    if (isDeleting) {
+                        creditCardElement.value = value;    
+                    } else {
+                        creditCardElement.value = `${value}-`;
+                    }
+                }
+            })
+        })()
+    </script>
+</div>
