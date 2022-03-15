@@ -27,6 +27,7 @@
         const MAX_CVV_LENGTH = 3;
         const MAX_CARD_NUMBER_LENGTH = 16;
         const MAX_EXP_DATE_LENGTH = 5;
+        const EMPTY_STRINGIFIED_OBJECT_LENGTH = 2;
         
         const ERRORS = {
           firstName: {
@@ -87,6 +88,14 @@
 
         const messageElement = document.getElementById("form-message");
 
+        const resetOnDefaultCardIcon = function() {
+          const iconElement = document.getElementById("creditCardIcon").firstElementChild;
+
+          iconElement.setAttribute("class", "icon");
+          iconElement.setAttribute("src", "/icons/question-mark.svg");
+          return;
+        }
+
         const renderErrorMessage = function(message) {
             const parseMessage = Object.keys(JSON.parse(message)).map(function(key) {
               return `${ERRORS[key].message}; `;
@@ -99,6 +108,7 @@
           const parsedMessage = JSON.parse(message);
           messageElement.setAttribute("class", "form-message form-message-success");
           messageElement.innerHTML = parsedMessage.message;
+          resetOnDefaultCardIcon();
           form.reset();
         }
 
@@ -126,7 +136,7 @@
 
               const data = Object.fromEntries(FD.entries()); 
               const validationMessages = getValidateMessages(data);
-              if (validationMessages) {
+              if (validationMessages.length > EMPTY_STRINGIFIED_OBJECT_LENGTH) {
                 return renderErrorMessage(validationMessages);
               }
         
@@ -155,7 +165,6 @@
           
             form.addEventListener("submit", function ( event ) {
               event.preventDefault();
-          
               sendOrder();
             });
           });
