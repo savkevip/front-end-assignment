@@ -69,7 +69,7 @@
 }
 /* order summary component - end */
 
-/* personal info form component - start */
+/* form container component - start */
 .checkout-form-container {
     width: 355px;
 }
@@ -77,7 +77,7 @@
 .checkout-form-content {
     padding-left: var(--space15);
 }
-/* personal info form component - end */
+/* form container component - end */
 
 /* form title component - start  */
 .checkout-form-title-container {
