@@ -7,11 +7,13 @@
     --radius50: 50px;
     --grey1: #f2f2f2;
     --grey2: #ebebeb;
+    --gray3: #b2afaf;
     --white: #ffffff;
     --black: #000000;
-    --green: #578b7b;
+    --green1: #578b7b;
+    --green2: #6bd400;
     --dashed-border: 1px dashed var(--grey2);
-    --box-shadow: 0 3px 5px 1px var(--grey2);
+    --box-shadow: 0 3px 5px 1px var(--gray3);
     --font-small: 12px;
     --font-normal: 14px;
     --font-big: 18px;

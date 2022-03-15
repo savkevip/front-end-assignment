@@ -2,7 +2,7 @@
     border: none;
     border-radius: var(--radius5);
     padding: var(--space10) var(--space15);
-    background-color: var(--green);
+    background-color: var(--green1);
     color: var(--white);
     transition: .3s;
 }

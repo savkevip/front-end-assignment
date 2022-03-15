@@ -1,11 +1,10 @@
 .checkout-container {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     width: 100%;
 }
 
-.checkout-container-box {
+.checkout-container-box:first-child {
+    margin-right: var(--space15);
 }
 
 /* order summary component - start */
@@ -63,7 +62,7 @@
 
 /* personal info form component - start */
 .checkout-form-container {
-    width: 350px;
+    width: 355px;
 }
 /* personal info form component - end */
 

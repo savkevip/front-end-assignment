@@ -1,0 +1,27 @@
+.icon {
+    width: 15px;
+    height: 15px;
+  }
+  
+.button {
+    width: 355px;
+    height: 50px;
+    color: var(--white);
+    background-color: var(--green2);
+    text-transform: uppercase;
+    border: none;
+    border-radius: var(--radius5);
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-label {
+    margin-left: var(--space10);
+}
+
+.button:hover {
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+}

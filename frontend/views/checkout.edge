@@ -7,16 +7,20 @@
       @!component('components/personal-info-form', {
         source: 'resources/views/checkout.edge',
       })
+      @!component('components/payment-details-form', {
+        source: 'resources/views/checkout.edge',
+      })
+      @!component('components/ui/button', {
+        source: 'resources/views/checkout.edge',
+        label: "Complete purchase",
+        icon: "cart",
+        onClick: `console.log("test")`
+      })
     </div>
     <div class="checkout-container-box">
       @!component('components/order-summary', {
         source: 'resources/views/checkout.edge',
         cart: state.cart || { items: [], totals: {} }
-      })
-    </div>
-    <div class="checkout-container-box">
-      @!component('components/payment-details-form', {
-        source: 'resources/views/checkout.edge',
       })
     </div>
   </div>
