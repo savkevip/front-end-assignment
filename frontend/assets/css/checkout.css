@@ -1,9 +1,21 @@
+.checkout-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.checkout-container-box {
+}
+
+/* order summary component - start */
 .checkout-summary-container {
     background-color: var(--white);
     padding: var(--space5);
     border-radius: var(--radius5);
     box-shadow: var(--box-shadow);
-    min-width: 250px;
+    width: 250px;
+    box-sizing: border-box;
 }
 
 .checkout-summary-content {
@@ -47,3 +59,36 @@
     color: var(--black);
     font-size: var(--font-large);
 }
+/* order summary component - end */
+
+/* personal info form component - start */
+.checkout-form-container {
+    width: 350px;
+}
+/* personal info form component - end */
+
+/* form title component - start  */
+.checkout-form-title-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--space10);
+}
+
+.checkout-form-title-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
+    color: var(--white);
+    width: 20px;
+    height: 20px;
+    border-radius: var(--radius50);
+    font-size: var(--font-normal);
+}
+
+.checkout-form-title-text {
+    margin: 0 var(--space10);
+    font-size: var(--font-normal);
+    text-transform: uppercase;
+}
+/* form title component - end  */

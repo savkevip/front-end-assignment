@@ -2,8 +2,22 @@
 @set('title', 'Checkout page')
 
 @section('body')
-  @!component('components/order-summary', {
-    source: 'resources/views/checkout.edge',
-    cart: state.cart
-  })
+  <div class="checkout-container">
+    <div class="checkout-container-box">
+      @!component('components/personal-info-form', {
+        source: 'resources/views/checkout.edge',
+      })
+    </div>
+    <div class="checkout-container-box">
+      @!component('components/order-summary', {
+        source: 'resources/views/checkout.edge',
+        cart: state.cart || { items: [], totals: {} }
+      })
+    </div>
+    <div class="checkout-container-box">
+      @!component('components/payment-details-form', {
+        source: 'resources/views/checkout.edge',
+      })
+    </div>
+  </div>
 @end

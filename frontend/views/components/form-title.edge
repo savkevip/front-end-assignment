@@ -1,0 +1,10 @@
+<div class="checkout-form-title-container">
+    <span class="checkout-form-title-number bold">{{$props.formNumber}}</span>
+    <span class="checkout-form-title-text bold">{{$props.title}}</span>
+    @if($props.icon)
+        @!component('components/ui/icon', {
+            source: 'resources/views/checkout.edge',
+            icon: $props.icon
+        })
+    @end
+</div>

@@ -1,0 +1,17 @@
+@if($props.icon === "lock")
+  <img class="icon" src="/icons/lock.svg" alt="lock icon" />
+@elseif($props.icon === "cart")
+    <img class="icon" src="/icons/cart.svg" alt="cart icon" />
+@elseif($props.icon === "visa")
+    <img class="icon" src="/icons/visa.svg" alt="visa icon" />
+@elseif($props.icon === "mastercard")
+    <img class="icon" src="/icons/mastercard.svg" alt="mastercard icon" />
+@elseif($props.icon === "american-express")
+    <img class="icon" src="/icons/american-express.svg" alt="american express icon" />
+@elseif($props.icon === "question-mark")
+    <img class="icon" src="/icons/question-mark.svg" alt="question mark icon" />
+@elseif($props.icon === "arrow-down")
+    <img class="icon" src="/icons/arrow-down.svg" alt="arrow down icon" />
+@else
+    <img class="icon" src="/icons/question-mark.svg" alt="question mark icon" />
+@end

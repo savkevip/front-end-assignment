@@ -84,3 +84,8 @@ main code {
 .bold {
   font-weight: bold;
 }
+
+.icon {
+  width: 15px;
+  height: 15px;
+}
